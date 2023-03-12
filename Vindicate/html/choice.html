@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>LOVE YOU</title>
+    <script src="../js/jquery_2.1.4.js"></script>
+    <script src="../js/bootstrap_3.3.4.js"></script>
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/bg_rink.css">
+    <link rel="stylesheet" href="../css/bootstrap_3.3.4.css">
+    <embed src="../audio/爱丫爱丫.mp3" autostart="" loop="true" hidden="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+<div class="container">
+    <div class="row col-md-3"></div>
+    <div class="row col-md-6">
+        <div class="row question">
+            <div class="col-md-6 col-xs-12">
+                <p style="line-height: 30px;font-size: 15px;">
+                    徐安平,和你相处那么久,相信你也能感觉出来,我已经喜欢上你了,但是我一直不知道你对我到底是什么感觉,你也一直没有表述,所以我决定努力一次!</p>
+                <p style="line-height: 30px;font-size: 15px;">
+                    我希望有个如你一般的人，如山间清爽的风，如古城温暖的光，从清晨到夜晚，由山野到书房，等待不怕岁月蹉跎，不怕路途遥远，只要最后是你就好。</p>
+                <p style="line-height: 40px;font-size: 15px;">我喜欢你,徐安平</p>
+                <p style="line-height: 40px;font-size: 15px;">你愿意从今往后一直的和我在一起吗</p>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <img src="../images/xiuxiu.png" alt="" style="height: 350px;">
+            </div>
+        </div>
+        <div class="row question" style="margin-top: 20px;">
+            <div class="col-md-6 col-xs-6" style="text-align: center;">
+                <button type="button" class="btn btn-success" style="width: 80%" id="no">愿意</button>
+            </div>
+            <div class="col-md-6 col-xs-6" style="text-align: center;">
+                <button type="button" class="btn btn-danger" style="width: 80%" id="ok">不愿意</button>
+            </div>
+        </div>
+        <div class="col-md-12 col-xs-12 hide" id="success">
+            <img src="../images/kaixin.jpg" alt="" style="width: 100%;">
+        </div>
+    </div>
+
+    <div class="row col-md-3"></div>
+
+</div>
+<script>
+    var i = 1;
+    var ok = false;
+    $(document).ready(function () {
+        $("#no").click(function () {
+            alert("我有女朋友啦?");
+            alert("捏捏自己,哎呀痛");
+            alert("这是真的!!!");
+            alert("我有女朋友啦!");
+            alert("我爱你,徐安平!");
+            alert("(PS:hh我会告诉你点不愿意有彩蛋吗？)");
+            self.location.href = "../html/love_balloon.html";
+            // $(".question").addClass('hide');
+            // $("#success").removeClass('hide');
+            ok = true;
+        });
+        $("#ok").click(function () {
+            switch (i) {
+                case 1:
+                    alert("好家伙你居然真的敢点！");
+                    break;
+                case 2:
+                    alert("你居然还点！");
+                    break;
+                case 3:
+                    alert("啊啊啊啊啊！");
+                    break;
+                case 4:
+                    alert("我要生气了！");
+                    break;
+                case 5:
+                    alert("呜呜呜呜，不许点了！");
+                    break;
+                case 6:
+                    alert("我会撒娇，会卖萌");
+                    break;
+                case 7:
+                    alert("答应我吧!");
+                    break;
+                case 8:
+                    alert("好不好嘛~");
+                    break;
+                case 9:
+                    alert("才不会丢下我的小朋友一个人的！");
+                    break;
+                case 10:
+                    alert("我会一直陪着你的！");
+                    break;
+                case 11:
+                    alert("我怕你哭！");
+                    break;
+                case 12:
+                    alert("也怕你受委屈");
+                    break;
+                case 13:
+                    alert("我怕你被欺负");
+                    break;
+                case 14:
+                    alert("还怕你照顾不好自己");
+                    break;
+                case 15:
+                    alert("更怕你有一天不理我");
+                    break;
+                default:
+                    alert("我真的不想错过你!\n答应我好嘛?\n乖~快点愿意啦~");
+            }
+            i++;
+        });
+    });
+</script>
+<script src="../js/love.js"></script>
+<audio autoplay="autoplay" loop="loop" preload="auto" controls="controls"
+       src="../audio/爱丫爱丫.mp3">
+</audio>
+<style type="text/css">
+    audio {
+        display: none;
+    }
+</style>
+</body>
+</html>
