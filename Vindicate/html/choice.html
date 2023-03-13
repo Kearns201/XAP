@@ -5,11 +5,11 @@
     <title>LOVE YOU</title>
     <script src="../js/jquery_2.1.4.js"></script>
     <script src="../js/bootstrap_3.3.4.js"></script>
-    <link rel="icon" type="image/png" href="../images/favicon.ico">
-    <link rel="stylesheet" href="../css/bg_rink.css">
-    <link rel="stylesheet" href="../css/bootstrap_3.3.4.css">
-    <embed src="../audio/爱丫爱丫.mp3" autostart="" loop="true" hidden="true">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="../images/favicon.ico" rel="icon" type="image/png">
+    <link href="../css/bg_rink.css" rel="stylesheet">
+    <link href="../css/bootstrap_3.3.4.css" rel="stylesheet">
+    <embed autostart="" hidden="true" loop="true" src="../audio/爱丫爱丫.mp3">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 </head>
 <body>
 <div class="container">
@@ -25,19 +25,19 @@
                 <p style="line-height: 40px;font-size: 15px;">你愿意从今往后一直的和我在一起吗</p>
             </div>
             <div class="col-md-6 col-xs-12">
-                <img src="../images/xiuxiu.png" alt="" style="height: 350px;">
+                <img alt="" src="../images/xiuxiu.png" style="height: 350px;">
             </div>
         </div>
         <div class="row question" style="margin-top: 20px;">
             <div class="col-md-6 col-xs-6" style="text-align: center;">
-                <button type="button" class="btn btn-success" style="width: 80%" id="no">愿意</button>
+                <button class="btn btn-success" id="no" style="width: 80%" type="button">愿意</button>
             </div>
             <div class="col-md-6 col-xs-6" style="text-align: center;">
-                <button type="button" class="btn btn-danger" style="width: 80%" id="ok">不愿意</button>
+                <button class="btn btn-danger" id="ok" style="width: 80%" type="button">不愿意</button>
             </div>
         </div>
         <div class="col-md-12 col-xs-12 hide" id="success">
-            <img src="../images/kaixin.jpg" alt="" style="width: 100%;">
+            <img alt="" src="../images/kaixin.jpg" style="width: 100%;">
         </div>
     </div>
 
@@ -55,7 +55,7 @@
             alert("我有女朋友啦!");
             alert("我爱你,徐安平!");
             alert("(PS:hh我会告诉你点不愿意有彩蛋吗？)");
-            self.location.href = "../html/love_balloon.html";
+            self.location.href = "../html/love.html";
             // $(".question").addClass('hide');
             // $("#success").removeClass('hide');
             ok = true;
@@ -115,7 +115,7 @@
     });
 </script>
 <script src="../js/love.js"></script>
-<audio autoplay="autoplay" loop="loop" preload="auto" controls="controls"
+<audio autoplay="autoplay" controls="controls" loop="loop" preload="auto"
        src="../audio/爱丫爱丫.mp3">
 </audio>
 <style type="text/css">

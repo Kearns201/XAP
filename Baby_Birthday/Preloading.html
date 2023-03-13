@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>稍等片刻</title>
+        <style>
+            .progress-bar {
+                width: 50%;
+                height: 20px;
+                background-color: #d09999;
+                border-radius: 10px;
+                margin: 50px auto;
+            }
+
+            .progress {
+                width: 0px;
+                height: 100%;
+                background-color: #cc2a5d;
+                border-radius: 10px;
+            }
+
+            .loading-text {
+                font-size: 20px;
+                text-align: center;
+            }
+        </style>
+</head>
+<body>
+
+<div class="progress-bar" >
+    <div class="progress"></div>
+</div>
+<div class="loading-text">加载中...</div>
+
+<!-- Preloading images -->
+<img src="./images/favicon.ico" style="display: none;">
+<img src="./images/body.jpg" style="display: none;">
+<img src="./images/baidu1.png" style="display: none;">
+
+<!-- Preloading audio -->
+<audio preload="auto" src="audio/show.mp3"></audio>
+<audio preload="auto" src="./audio/birthday.mp3"></audio>
+
+<script>
+    let images = document.querySelectorAll('img');
+    let audio = document.querySelector('audio');
+
+    let loadedCount = 0;
+    let totalCount = images.length + 1; // Add 1 for audio
+
+    let updateProgress = function () {
+        loadedCount++;
+
+        let progress = Math.round((loadedCount / totalCount) * 100);
+        let progressBar = document.querySelector('.progress-bar');
+        progressBar.style.width = progress + '%';
+
+        let progressText = document.querySelector('.loading-text');
+        progressText.innerText = 'Loading ' + progress + '%';
+
+        // Done loading
+        if (loadedCount === totalCount) {
+            setTimeout(function () {
+                window.location.href = 'html/star.html';
+            }, 5000);
+        }
+    };
+
+    // Handling images
+    images.forEach(function (img) {
+        img.addEventListener('load', updateProgress);
+    });
+
+    // Handling audio
+    audio.addEventListener('canplaythrough', updateProgress);
+</script>
+</body>
+</html>
