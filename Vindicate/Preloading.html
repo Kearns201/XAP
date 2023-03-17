@@ -2,7 +2,8 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>稍等片刻</title>
+    <title>❤️稍等片刻❤️</title>
+    <link href="./images/favicon.ico" rel="icon" type="image/png">
     <link href="./css/index.css" rel="stylesheet">
     <!--    <style>-->
     <!--        .progress-bar {-->
@@ -69,13 +70,13 @@
         progressBar.style.width = progress + '%';
 
         let progressText = document.querySelector('.loading-text');
-        progressText.innerText = 'Loading ' + progress + '%';
+        progressText.innerText = '加载中 ' + progress + '%';
 
         // Done loading
         if (loadedCount === totalCount) {
             setTimeout(function () {
                 window.location.href = './html/star.html';
-            }, 5000);
+            }, 3000);
         }
     };
 

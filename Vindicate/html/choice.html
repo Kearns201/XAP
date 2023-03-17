@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>LOVE YOU</title>
+    <title>I Love You ❤️</title>
     <script src="../js/jquery_2.1.4.js"></script>
     <script src="../js/bootstrap_3.3.4.js"></script>
     <link href="../images/favicon.ico" rel="icon" type="image/png">
@@ -16,12 +16,9 @@
     <div class="row col-md-3"></div>
     <div class="row col-md-6">
         <div class="row question">
-            <div class="col-md-6 col-xs-12">
-                <p style="line-height: 30px;font-size: 15px;">
-                    徐安平,和你相处那么久,相信你也能感觉出来,我已经喜欢上你了,但是我一直不知道你对我到底是什么感觉,你也一直没有表述,所以我决定努力一次!</p>
-                <p style="line-height: 30px;font-size: 15px;">
-                    我希望有个如你一般的人，如山间清爽的风，如古城温暖的光，从清晨到夜晚，由山野到书房，等待不怕岁月蹉跎，不怕路途遥远，只要最后是你就好。</p>
-                <p style="line-height: 40px;font-size: 15px;">我喜欢你,徐安平</p>
+            <div class="col-md-6 col-xs-12" id="code"><p style="line-height: 30px;font-size: 15px;">宝宝, 今天呢, 我等了很久, 也准备了很久, 我觉得这个事情还是我主动一点会比较好</p>
+                <p style="line-height: 30px;font-size: 15px;">我希望有个如你一般的人, 如山间清爽的风, 如古城温暖的光, 从清晨到夜晚, 由山野到书房, 等待不怕岁月蹉跎, 不怕路途遥远, 只要最后是你就好。</p>
+                <p style="line-height: 40px;font-size: 15px;">我喜欢你, 徐安平</p>
                 <p style="line-height: 40px;font-size: 15px;">你愿意从今往后一直的和我在一起吗</p>
             </div>
             <div class="col-md-6 col-xs-12">
@@ -45,6 +42,28 @@
 
 </div>
 <script>
+    Element.prototype.typewriter = function (a) {
+        var d = this,
+            c = d.innerHTML,
+            b = 0;
+        d.innerHTML = "";
+        var e = setInterval(function () {
+            var f = c.substr(b, 1);
+            if (f === "<") {
+                b = c.indexOf(">", b) + 1
+            } else {
+                b++
+            }
+            d.innerHTML = c.substring(0, b) + (b & 1 ? "_" : "");
+            if (b >= c.length) {
+                clearInterval(e)
+            }
+        }, 150)
+        return this
+    }
+    document.getElementById("code").typewriter();
+</script>
+<script>
     var i = 1;
     var ok = false;
     $(document).ready(function () {
@@ -53,7 +72,7 @@
             alert("捏捏自己,哎呀痛");
             alert("这是真的!!!");
             alert("我有女朋友啦!");
-            alert("我爱你,徐安平!");
+            alert("我爱你,徐安平!!");
             alert("(PS:hh我会告诉你点不愿意有彩蛋吗？)");
             self.location.href = "../html/love.html";
             // $(".question").addClass('hide');
@@ -63,22 +82,22 @@
         $("#ok").click(function () {
             switch (i) {
                 case 1:
-                    alert("好家伙你居然真的敢点！");
+                    alert("好家伙你居然真的敢点!");
                     break;
                 case 2:
-                    alert("你居然还点！");
+                    alert("你居然还点!");
                     break;
                 case 3:
-                    alert("啊啊啊啊啊！");
+                    alert("啊啊啊啊啊!");
                     break;
                 case 4:
-                    alert("我要生气了！");
+                    alert("我要生气了!");
                     break;
                 case 5:
-                    alert("呜呜呜呜，不许点了！");
+                    alert("呜呜呜呜, 不许点了!");
                     break;
                 case 6:
-                    alert("我会撒娇，会卖萌");
+                    alert("我会撒娇, 会卖萌");
                     break;
                 case 7:
                     alert("答应我吧!");
@@ -87,13 +106,13 @@
                     alert("好不好嘛~");
                     break;
                 case 9:
-                    alert("才不会丢下我的小朋友一个人的！");
+                    alert("才不会丢下我的小朋友一个人的!");
                     break;
                 case 10:
-                    alert("我会一直陪着你的！");
+                    alert("我会一直陪着你的!");
                     break;
                 case 11:
-                    alert("我怕你哭！");
+                    alert("我怕你哭!");
                     break;
                 case 12:
                     alert("也怕你受委屈");

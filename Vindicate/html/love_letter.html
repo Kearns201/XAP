@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>I Love You ❤️</title>
+    <link href="../images/favicon.ico" rel="icon" type="image/png">
+    <meta content="送给最爱的你" name="keywords"/>
+    <meta content="送给最爱的你" name="description"/>
+    <meta content="52;url=./choice.html" http-equiv="refresh">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <script src="../js/js.js" type="text/javascript"></script>
+</head>
+<body id="bgc">
+<script src="../js/main.js" type="text/javascript"></script>
+<div class="mb-box">
+    <div class="bb">
+        <h2>小情书</h2>
+        <div class="bb_text">
+            <div id="code">平平, 有人说两个人相遇的几率是0.00487, 相识相知的几率更是小到只有十亿分之三, 相爱的概率更是小到可怜。很庆幸, 缘分让我们再次相遇, 三年前的年末, 三年后的今天, 我相信这一定是命运的安排。不知道你有没有听过一句话, 在丁达尔效应出现的时候, 光就有了形状。其实在遇到你之前我并不相信所谓的心有灵犀, 对我而言你的出现, 心动便有了定义。余生不长, 愿与你同行。
+            </div>
+        </div>
+        <p class="bb_myname">
+            小凯<br/>
+        </p>
+    </div>
+</div>
+<script>
+    Element.prototype.typewriter = function (a) {
+        var d = this,
+            c = d.innerHTML,
+            b = 0;
+        d.innerHTML = "";
+        var e = setInterval(function () {
+            var f = c.substr(b, 1);
+            if (f === "<") {
+                b = c.indexOf(">", b) + 1
+            } else {
+                b++
+            }
+            d.innerHTML = c.substring(0, b) + (b & 1 ? "_" : "");
+            if (b >= c.length) {
+                clearInterval(e)
+            }
+        }, 150)
+        return this
+    }
+    document.getElementById("code").typewriter();
+</script>
+<audio autoplay="autoplay" controls="controls" loop="loop" preload="auto"
+       src="../audio/朝夕盼风.mp3">
+</audio>
+</body>
+</html>
