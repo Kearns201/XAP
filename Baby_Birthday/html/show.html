@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>生日快乐</title>
-    <audio id="main_audio" autoplay="autoplay" preload="auto" loop>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>🎉</title>
+    <link href="../images/favicon.ico" rel="icon" type="image/png">
+    <audio autoplay="autoplay" id="main_audio" loop preload="auto">
         <source src="../audio/show.mp3" type="audio/mpeg"/>
     </audio>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <style>
         html {
             height: 100%;
@@ -16,7 +17,7 @@
         body {
             font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
             background: #79a8ae;
-            color: #CFEBE4;
+            color: #e8ccdb;
             font-size: 18px;
             line-height: 2;
             letter-spacing: 1.2px;
@@ -28,11 +29,11 @@
         }
 
         .body--ready {
-            background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+            background: -webkit-linear-gradient(top, rgb(232, 204, 219) 0%, rgb(55, 148, 192) 120%);
+            background: -moz-linear-gradient(top, rgb(232, 204, 219) 0%, rgb(55, 148, 192) 120%);
+            background: -o-linear-gradient(top, rgb(232, 204, 219) 0%, rgb(55, 148, 192) 120%);
+            background: -ms-linear-gradient(top, rgb(232, 204, 219) 0%, rgb(55, 148, 192) 120%);
+            background: linear-gradient(top, rgb(232, 204, 219) 0%, rgb(55, 148, 192) 120%);
         }
 
         .text {
@@ -61,8 +62,8 @@
         }
 
         #logo:hover {
-            box-shadow: 0 0 10px #fff;
-            -webkit-box-shadow: 0 0 19px #fff;
+            box-shadow: 0 0 10px #e8ccdb;
+            -webkit-box-shadow: 0 0 19px #e8ccdb;
             transform: rotate(360deg);
             -ms-transform: rotate(360deg); /* IE 9 */
             -moz-transform: rotate(360deg); /* Firefox */
@@ -100,15 +101,15 @@
 
 <body>
 <div class="cs">
-    <img src="../images/body.jpg" id="logo">
+    <img id="logo" src="../images/body.jpg">
 </div>
-<canvas class="canvas" width="1820" height="905"></canvas>
+<canvas class="canvas" height="905" width="1820"></canvas>
 <script>
     var S = {
         init: function () {
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
-            S.UI.simulate("Hi|徐安平|准备好了吗|I'm|金欣凯|祝你20岁|生日快乐!|#countdown 5|#time");
+            S.UI.simulate("那么|徐安平|准备好|迎接|你的|20岁|生日了吗!|#countdown 5|#time");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });

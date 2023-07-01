@@ -5,41 +5,14 @@
     <title>❤️稍等片刻❤️</title>
     <link href="./images/favicon.ico" rel="icon" type="image/png">
     <link href="./css/index.css" rel="stylesheet">
-    <!--    <style>-->
-    <!--        .progress-bar {-->
-    <!--            width: 75%;-->
-    <!--            height: 20px;-->
-    <!--            background-color: #ccc;-->
-    <!--            border-radius: 10px;-->
-    <!--            margin: 50px auto;-->
-    <!--        }-->
-
-    <!--        .progress {-->
-    <!--            width: 0;-->
-    <!--            height: 100%;-->
-    <!--            background-color: #cc2a5d;-->
-    <!--            border-radius: 10px;-->
-    <!--        }-->
-
-    <!--        .loading-text {-->
-    <!--            font-size: 20px;-->
-    <!--            text-align: center;-->
-    <!--        }-->
-    <!--    </style>-->
 </head>
 <body>
-<!--<div class="progress-bar">-->
-<!--    <div class="progress"></div>-->
-<!--</div>-->
-<!--<div class="loading-text">加载中...</div>-->
-
 <div>
     <div class="loading-bar">
         <div class="loading-bar-inner"></div>
     </div>
     <div class="loading-text">加载中...</div>
 </div>
-
 <!-- Preloading images -->
 <img src="./images/bg.jpg" style="display: none;">
 <img src="./images/favicon.ico" style="display: none;">
@@ -47,7 +20,6 @@
 <img src="./images/xiuxiu.png" style="display: none;">
 <img src="./images/bg01.jpg" style="display: none;">
 <img src="./images/baidu1.png" style="display: none;">
-
 <!-- Preloading audio -->
 <audio preload="auto" src="./audio/朝夕盼风.mp3"></audio>
 <audio preload="auto" src="./audio/爱丫爱丫.mp3"></audio>
@@ -57,20 +29,15 @@
 <script>
     let images = document.querySelectorAll('img');
     let audio = document.querySelector('audio');
-
     let loadedCount = 0;
     let totalCount = images.length + 1; // Add 1 for audio
-
     let updateProgress = function () {
         loadedCount++;
-
         let progress = Math.round((loadedCount / totalCount) * 100);
         let progressBar = document.querySelector('.loading-bar-inner');
         progressBar.style.width = progress + '%';
-
         let progressText = document.querySelector('.loading-text');
         progressText.innerText = '加载中 ' + progress + '%';
-
         // Done loading
         if (loadedCount === totalCount) {
             setTimeout(function () {
@@ -78,12 +45,10 @@
             }, 3000);
         }
     };
-
     // Handling images
     images.forEach(function (img) {
         img.addEventListener('load', updateProgress);
     });
-
     // Handling audio
     audio.addEventListener('canplaythrough', updateProgress);
 </script>

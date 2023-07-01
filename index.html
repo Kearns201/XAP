@@ -2,55 +2,12 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>❤️稍等片刻❤️</title>
-    <link href="./Vindicate/images/favicon.ico" rel="icon" type="image/png">
-    <link href="./Vindicate/css/index.css" rel="stylesheet">
+    <title>🎉</title>、
 </head>
-<body>
-<div>
-    <div class="loading-bar">
-        <div class="loading-bar-inner"></div>
-    </div>
-    <div class="loading-text">加载中...</div>
-</div>
-<!-- Preloading images -->
-<img src="./Vindicate/images/bg.jpg" style="display: none;">
-<img src="./Vindicate/images/favicon.ico" style="display: none;">
-<img src="./Vindicate/images/lover.jpg" style="display: none;">
-<img src="./Vindicate/images/xiuxiu.png" style="display: none;">
-<img src="./Vindicate/images/bg01.jpg" style="display: none;">
-<img src="./Vindicate/images/baidu1.png" style="display: none;">
-<!-- Preloading audio -->
-<audio preload="auto" src="./Vindicate/audio/朝夕盼风.mp3"></audio>
-<audio preload="auto" src="./Vindicate/audio/爱丫爱丫.mp3"></audio>
-<audio preload="auto" src="./Vindicate/audio/落在生命里的光.mp3"></audio>
-<audio preload="auto" src="./Vindicate/audio/show.mp3"></audio>
 
-<script>
-    let images = document.querySelectorAll('img');
-    let audio = document.querySelector('audio');
-    let loadedCount = 0;
-    let totalCount = images.length + 1; // Add 1 for audio
-    let updateProgress = function () {
-        loadedCount++;
-        let progress = Math.round((loadedCount / totalCount) * 100);
-        let progressBar = document.querySelector('.loading-bar-inner');
-        progressBar.style.width = progress + '%';
-        let progressText = document.querySelector('.loading-text');
-        progressText.innerText = '加载中 ' + progress + '%';
-        // Done loading
-        if (loadedCount === totalCount) {
-            setTimeout(function () {
-                window.location.href = './Vindicate/html/star.html';
-            }, 3000);
-        }
-    };
-    // Handling images
-    images.forEach(function (img) {
-        img.addEventListener('load', updateProgress);
-    });
-    // Handling audio
-    audio.addEventListener('canplaythrough', updateProgress);
-</script>
+<body style="background-color: rgb(255,199,199)">
+    <script>
+        window.location.href = "Baby_Birthday/index.html";
+    </script>
 </body>
 </html>
